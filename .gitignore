@@ -1,0 +1,22 @@
+# secrets
+.env
+**/.env
+
+# large / regenerable
+rag_pipeline/data/fastapi_repo/
+rag_pipeline/data/embeddings.npy
+rag_pipeline/data/faiss.index
+node_modules/
+__pycache__/
+*.pyc
+
+# Office lock / temp files
+~$*
+
+# course materials and drafts not part of the code release
+ML_Lecture_5.pdf
+ML_Project_Ideas.md
+RAG_Failure_Taxonomy.pptx
+rag_pipeline/results/ai_review_notes.md
+rag_pipeline/results/labels_decisions.txt
+rag_pipeline/results/*.backup.*

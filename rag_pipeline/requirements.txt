@@ -1,0 +1,8 @@
+openai
+faiss-cpu
+sentence-transformers
+rank_bm25
+tiktoken
+tqdm
+numpy
+matplotlib

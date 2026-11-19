@@ -1,0 +1,1119 @@
+[
+  {
+    "qid": "look-001",
+    "type": "lookup",
+    "question": "How can you add a custom logo to the OpenAPI schema in FastAPI?",
+    "gold_answer": "You can add a custom logo to the OpenAPI schema in FastAPI by using the ReDoc extension to add a custom `x-logo` to the `info` object in the OpenAPI schema.",
+    "gold_chunks": [
+      "how-to/extending-openapi#003"
+    ]
+  },
+  {
+    "qid": "look-002",
+    "type": "lookup",
+    "question": "How can you access the client's IP address in a FastAPI path operation function?",
+    "gold_answer": "You can access the client's IP address by using the 'Request' object directly and retrieving it from 'request.client.host'.",
+    "gold_chunks": [
+      "advanced/using-request-directly#000"
+    ]
+  },
+  {
+    "qid": "look-003",
+    "type": "lookup",
+    "question": "What happens to normal WebSocket disconnects with codes 1000 or 1001 in FastAPI's OpenTelemetry setup?",
+    "gold_answer": "Normal WebSocket disconnects with codes 1000 or 1001 do not produce error logs.",
+    "gold_chunks": [
+      "advanced/opentelemetry#003"
+    ]
+  },
+  {
+    "qid": "look-004",
+    "type": "lookup",
+    "question": "What is the primary purpose of the Requests library in comparison to FastAPI?",
+    "gold_answer": "Requests is a library to interact with APIs as a client, while FastAPI is a library to build APIs as a server.",
+    "gold_chunks": [
+      "alternatives#001"
+    ]
+  },
+  {
+    "qid": "look-005",
+    "type": "lookup",
+    "question": "How does FastAPI handle serving an application when using a single file with Docker?",
+    "gold_answer": "FastAPI automatically detects that it is a single file when passed to 'fastapi run' and knows how to import and serve the FastAPI app.",
+    "gold_chunks": [
+      "deployment/docker#009"
+    ]
+  },
+  {
+    "qid": "look-006",
+    "type": "lookup",
+    "question": "Why is it important to close a file-like object after using it in a generator function in FastAPI?",
+    "gold_answer": "It is important to close a file-like object after using it in a generator function to ensure that resources are properly released, which is crucial when dealing with real files rather than in-memory files like `io.BytesIO`.",
+    "gold_chunks": [
+      "advanced/stream-data#032"
+    ]
+  },
+  {
+    "qid": "look-007",
+    "type": "lookup",
+    "question": "What module does FastAPI provide to simplify using security mechanisms?",
+    "gold_answer": "FastAPI provides the `fastapi.security` module to simplify using security mechanisms.",
+    "gold_chunks": [
+      "tutorial/security/index#002"
+    ]
+  },
+  {
+    "qid": "look-008",
+    "type": "lookup",
+    "question": "What library is used as the basis for testing FastAPI applications?",
+    "gold_answer": "FastAPI testing is based on HTTPX, which is designed based on Requests.",
+    "gold_chunks": [
+      "tutorial/testing#000"
+    ]
+  },
+  {
+    "qid": "look-009",
+    "type": "lookup",
+    "question": "What types of data conversion does FastAPI handle for input data?",
+    "gold_answer": "FastAPI handles conversion of input data from JSON, path parameters, query parameters, cookies, headers, forms, and files.",
+    "gold_chunks": [
+      "index#006"
+    ]
+  },
+  {
+    "qid": "look-010",
+    "type": "lookup",
+    "question": "How can you set cookies in a FastAPI path operation function?",
+    "gold_answer": "You can set cookies in a FastAPI path operation function by declaring a parameter of type 'Response' and using the 'set_cookie' method on it.",
+    "gold_chunks": [
+      "advanced/response-cookies#000"
+    ]
+  },
+  {
+    "qid": "look-011",
+    "type": "lookup",
+    "question": "In FastAPI's query parameter validation docs, what regular expression is used so that the query parameter q only accepts one exact fixed value?",
+    "gold_answer": "The regular expression pattern used is '^fixedquery$', which checks that the parameter value is exactly 'fixedquery' with no additional characters before or after.",
+    "gold_chunks": [
+      "tutorial/query-params-str-validations#005"
+    ],
+    "note": "[hand-edited]"
+  },
+  {
+    "qid": "look-012",
+    "type": "lookup",
+    "question": "What is the purpose of the 'tokenUrl' parameter when creating an instance of the OAuth2PasswordBearer class in FastAPI?",
+    "gold_answer": "The 'tokenUrl' parameter specifies the URL that the client will use to send the username and password to obtain a token.",
+    "gold_chunks": [
+      "tutorial/security/first-steps#003"
+    ]
+  },
+  {
+    "qid": "look-013",
+    "type": "lookup",
+    "question": "How can you define startup and shutdown logic in a FastAPI application?",
+    "gold_answer": "You can define startup and shutdown logic using the 'lifespan' parameter of the FastAPI app and a context manager.",
+    "gold_chunks": [
+      "advanced/events#001"
+    ]
+  },
+  {
+    "qid": "look-014",
+    "type": "lookup",
+    "question": "How can you include external documentation links for tags in FastAPI?",
+    "gold_answer": "You can include external documentation links for tags in FastAPI by adding an 'externalDocs' dictionary with 'description' and 'url' keys to the tag's metadata.",
+    "gold_chunks": [
+      "tutorial/metadata#003"
+    ]
+  },
+  {
+    "qid": "look-015",
+    "type": "lookup",
+    "question": "Besides its recommended default hashing algorithm, which other algorithm does pwdlib support, and what library do the FastAPI docs suggest for working with legacy password hashes?",
+    "gold_answer": "pwdlib also supports bcrypt, but it does not include legacy algorithms; for outdated hashes the docs recommend the passlib library.",
+    "gold_chunks": [
+      "tutorial/security/oauth2-jwt#002"
+    ],
+    "note": "[hand-edited]"
+  },
+  {
+    "qid": "look-016",
+    "type": "lookup",
+    "question": "What must a backend include in its configuration to allow communication from a frontend running at a different origin?",
+    "gold_answer": "The backend must have a list of 'allowed origins' that includes the origin of the frontend.",
+    "gold_chunks": [
+      "tutorial/cors#000"
+    ]
+  },
+  {
+    "qid": "look-017",
+    "type": "lookup",
+    "question": "What HTTP status code is returned for an inactive user in the FastAPI OAuth2 example?",
+    "gold_answer": "The HTTP status code 400 is returned for an inactive user.",
+    "gold_chunks": [
+      "tutorial/security/simple-oauth2#013"
+    ]
+  },
+  {
+    "qid": "look-018",
+    "type": "lookup",
+    "question": "How are JSON objects separated in a JSON Lines format?",
+    "gold_answer": "In a JSON Lines format, JSON objects are separated by a new line character.",
+    "gold_chunks": [
+      "tutorial/stream-json-lines#001"
+    ]
+  },
+  {
+    "qid": "look-019",
+    "type": "lookup",
+    "question": "In the FastAPI settings and environment variables docs, what does the get_settings dependency return?",
+    "gold_answer": "The 'get_settings' function returns a new 'config.Settings()' object.",
+    "gold_chunks": [
+      "advanced/settings#004"
+    ],
+    "note": "[hand-edited]"
+  },
+  {
+    "qid": "look-020",
+    "type": "lookup",
+    "question": "In the burger-restaurant analogy FastAPI uses to explain concurrency, what is the cashier doing while you wait in line?",
+    "gold_answer": "The cashier is only taking the orders, not preparing them.",
+    "gold_chunks": [
+      "async#003"
+    ],
+    "note": "[hand-edited]"
+  },
+  {
+    "qid": "look-021",
+    "type": "lookup",
+    "question": "What is the purpose of using 'ge=1' in the Path parameter for 'item_id' in FastAPI?",
+    "gold_answer": "The 'ge=1' in the Path parameter for 'item_id' ensures that the integer value must be greater than or equal to 1.",
+    "gold_chunks": [
+      "tutorial/path-params-numeric-validations#003"
+    ]
+  },
+  {
+    "qid": "look-022",
+    "type": "lookup",
+    "question": "What path prefix does Traefik use according to the configuration in the routes.toml file?",
+    "gold_answer": "Traefik uses the path prefix '/api/v1' according to the configuration in the routes.toml file.",
+    "gold_chunks": [
+      "advanced/behind-a-proxy#006"
+    ]
+  },
+  {
+    "qid": "look-023",
+    "type": "lookup",
+    "question": "What HTTP status code is returned when a client requests an item ID that does not exist in the FastAPI application?",
+    "gold_answer": "A status code of 404 is returned when a client requests an item ID that does not exist.",
+    "gold_chunks": [
+      "tutorial/handling-errors#001"
+    ]
+  },
+  {
+    "qid": "look-024",
+    "type": "lookup",
+    "question": "In which FastAPI version was support for pydantic.v1 models added, and in which version was it removed?",
+    "gold_answer": "Support for pydantic.v1 models was added in FastAPI 0.119.0 and removed in FastAPI 0.128.0.",
+    "gold_chunks": [
+      "how-to/migrate-from-pydantic-v1-to-pydantic-v2#001"
+    ],
+    "note": "[hand-edited]"
+  },
+  {
+    "qid": "look-025",
+    "type": "lookup",
+    "question": "How can you make a cookie parameter model optional in FastAPI?",
+    "gold_answer": "You can declare a cookie parameter model with '| None' and a default of 'None' to make the group optional.",
+    "gold_chunks": [
+      "tutorial/cookie-param-models#002"
+    ]
+  },
+  {
+    "qid": "look-026",
+    "type": "lookup",
+    "question": "What is the default maximum number of text fields allowed in a form in FastAPI?",
+    "gold_answer": "The default maximum number of text fields allowed in a form in FastAPI is 1,000.",
+    "gold_chunks": [
+      "advanced/request-body-limits#002"
+    ]
+  },
+  {
+    "qid": "look-027",
+    "type": "lookup",
+    "question": "How does FastAPI handle dependencies that require extra steps after execution?",
+    "gold_answer": "FastAPI handles such dependencies by using 'yield' instead of 'return', allowing extra steps to be executed after the response is created.",
+    "gold_chunks": [
+      "tutorial/dependencies/dependencies-with-yield#000"
+    ]
+  },
+  {
+    "qid": "look-028",
+    "type": "lookup",
+    "question": "What is the purpose of the 'create_db_and_tables' function in the FastAPI application using SQLModel?",
+    "gold_answer": "The 'create_db_and_tables' function is used to create the database and tables by calling 'SQLModel.metadata.create_all(engine)' during the application startup.",
+    "gold_chunks": [
+      "tutorial/sql-databases#001"
+    ]
+  },
+  {
+    "qid": "look-029",
+    "type": "lookup",
+    "question": "What method does the custom subclass of APIRoute overwrite in the FastAPI example?",
+    "gold_answer": "The custom subclass of APIRoute overwrites the method APIRoute.get_route_handler().",
+    "gold_chunks": [
+      "how-to/custom-request-and-route#001"
+    ]
+  },
+  {
+    "qid": "look-030",
+    "type": "lookup",
+    "question": "What scope is required for the path operation '/users/me/items/' in FastAPI?",
+    "gold_answer": "The path operation '/users/me/items/' requires the scope 'items'.",
+    "gold_chunks": [
+      "advanced/security/oauth2-scopes#013"
+    ]
+  },
+  {
+    "qid": "look-031",
+    "type": "lookup",
+    "question": "When writing a type hint for a Python dict, how many type parameters do you pass and what does each one represent?",
+    "gold_answer": "To define a dictionary, two type parameters are used: the first for the keys and the second for the values.",
+    "gold_chunks": [
+      "python-types#003"
+    ],
+    "note": "[hand-edited]"
+  },
+  {
+    "qid": "look-032",
+    "type": "lookup",
+    "question": "How can you include binary data in JSON when using FastAPI?",
+    "gold_answer": "You can include binary data in JSON by encoding it as base64.",
+    "gold_chunks": [
+      "advanced/json-base64-bytes#000"
+    ]
+  },
+  {
+    "qid": "look-033",
+    "type": "lookup",
+    "question": "What does the 'query_or_cookie_extractor' function in FastAPI depend on?",
+    "gold_answer": "The 'query_or_cookie_extractor' function depends on the 'query_extractor' function.",
+    "gold_chunks": [
+      "tutorial/dependencies/sub-dependencies#001"
+    ]
+  },
+  {
+    "qid": "look-034",
+    "type": "lookup",
+    "question": "What is the purpose of modifying the OpenAPI operation IDs before generating clients?",
+    "gold_answer": "The purpose is to make the method names nicer and cleaner.",
+    "gold_chunks": [
+      "advanced/generate-clients#005"
+    ]
+  },
+  {
+    "qid": "look-035",
+    "type": "lookup",
+    "question": "What is the recommended way to handle user passwords in FastAPI to avoid sending them in responses?",
+    "gold_answer": "It is recommended to use separate input and output models, where the output model does not include the plaintext password.",
+    "gold_chunks": [
+      "tutorial/response-model#004"
+    ]
+  },
+  {
+    "qid": "look-036",
+    "type": "lookup",
+    "question": "Which template engine is commonly used with FastAPI and also used by Flask?",
+    "gold_answer": "A common choice for a template engine with FastAPI is Jinja2, which is also used by Flask.",
+    "gold_chunks": [
+      "advanced/templates#000"
+    ]
+  },
+  {
+    "qid": "look-037",
+    "type": "lookup",
+    "question": "Why should the path '/users/me' be declared before '/users/{user_id}' in FastAPI?",
+    "gold_answer": "The path '/users/me' should be declared first to prevent '/users/{user_id}' from incorrectly matching '/users/me', interpreting 'me' as a user_id parameter.",
+    "gold_chunks": [
+      "tutorial/path-params#002"
+    ]
+  },
+  {
+    "qid": "look-038",
+    "type": "lookup",
+    "question": "What version of OpenAPI supports webhooks when using FastAPI?",
+    "gold_answer": "Webhooks are supported in OpenAPI 3.1.0 and above.",
+    "gold_chunks": [
+      "advanced/openapi-webhooks#000"
+    ]
+  },
+  {
+    "qid": "look-039",
+    "type": "lookup",
+    "question": "What is one advantage of using 'UploadFile' over 'bytes' in FastAPI?",
+    "gold_answer": "One advantage of using 'UploadFile' over 'bytes' is that it uses a 'spooled' file, which allows it to handle large files without consuming all the memory.",
+    "gold_chunks": [
+      "tutorial/request-files#001"
+    ]
+  },
+  {
+    "qid": "look-040",
+    "type": "lookup",
+    "question": "What version of FastAPI started using OpenAPI 3.1.0?",
+    "gold_answer": "FastAPI version 0.99.0 and above started using OpenAPI 3.1.0.",
+    "gold_chunks": [
+      "tutorial/schema-extra-example#007"
+    ]
+  },
+  {
+    "qid": "mult-001",
+    "type": "multi_hop",
+    "question": "How can you ensure that custom headers are visible to a client in a browser when using FastAPI, and what role does CORS middleware play in this process?",
+    "gold_answer": "To ensure that custom headers are visible to a client in a browser when using FastAPI, you need to add them to your CORS configurations using the 'expose_headers' parameter. The CORS middleware intercepts incoming requests and includes the appropriate CORS headers in the response, which is crucial for making custom headers visible to clients.",
+    "gold_chunks": [
+      "tutorial/cors#003",
+      "advanced/response-headers#001"
+    ],
+    "note": "A: The CORS middleware intercepts incoming requests and includes appropriate CORS headers in the response. | B: Custom headers that you want a client in a browser to see need to be added to your CORS configurations using the 'expose_headers' parameter."
+  },
+  {
+    "qid": "mult-002",
+    "type": "multi_hop",
+    "question": "How can you handle and log validation errors with detailed request body information in a FastAPI application, and what happens if you raise an HTTPException within a utility function called from a path operation function?",
+    "gold_answer": "In a FastAPI application, you can handle and log validation errors by creating a custom APIRoute class, such as ValidationErrorLoggingRoute, which overrides the get_route_handler method to catch RequestValidationError exceptions. Within this custom handler, you can access and log the request body and error details before raising an HTTPException with a status code of 422. If you raise an HTTPException within a utility function called from a path operation function, the request is terminated immediately, and the error is sent to the client without executing the remaining code in the path operation function.",
+    "gold_chunks": [
+      "how-to/custom-request-and-route#003",
+      "tutorial/handling-errors#001"
+    ],
+    "note": "A: You can handle request validation errors by creating a custom APIRoute class that overrides the get_route_handler method to catch RequestValidationError exceptions and log the request body and error details. | B: Raising an HTTPException within a utility function called from a path operation function immediately terminates the request and sends the error to the client, skipping the rest of the path operation function's code."
+  },
+  {
+    "qid": "mult-003",
+    "type": "multi_hop",
+    "question": "How can you ensure that a Pydantic model's data is returned as a dictionary in a FastAPI path operation while maintaining data validation and security?",
+    "gold_answer": "You can ensure that a Pydantic model's data is returned as a dictionary by using the `.model_dump()` method to convert the model to a dictionary. In a FastAPI path operation, you can maintain data validation and security by using the `response_model` parameter to specify the Pydantic model, which will handle data documentation and validation.",
+    "gold_chunks": [
+      "tutorial/response-model#001",
+      "tutorial/extra-models#001"
+    ],
+    "note": "A: In FastAPI, you can use the `response_model` parameter in path operations like `@app.get()`, `@app.post()`, etc., to declare a Pydantic model for data validation and security. | B: Pydantic models have a `.model_dump()` method that converts the model into a dictionary, which can then be used in functions or classes by unpacking it with `**user_dict`."
+  },
+  {
+    "qid": "mult-004",
+    "type": "multi_hop",
+    "question": "How does FastAPI handle user authentication with OAuth2 when verifying passwords and generating access tokens?",
+    "gold_answer": "FastAPI uses OAuth2PasswordBearer for authentication, where it verifies the password by comparing it with a hashed version stored in the database. If the password is correct, it generates an access token using JWT, which includes an expiration time.",
+    "gold_chunks": [
+      "advanced/security/oauth2-scopes#023",
+      "tutorial/security/simple-oauth2#006"
+    ],
+    "note": "A: FastAPI uses a function called verify_password to check if the provided password matches the hashed password stored in the database, and it uses create_access_token to generate a JWT token with an expiration time. | B: In the login endpoint, FastAPI checks the provided password against the hashed password using a fake hashing system and returns an access token if the passwords match."
+  },
+  {
+    "qid": "mult-005",
+    "type": "multi_hop",
+    "question": "How can you avoid blocking the event loop when streaming a large file in FastAPI, and what custom response class could enhance JSON performance?",
+    "gold_answer": "To avoid blocking the event loop when streaming a large file, you can declare the path operation function with a regular 'def' instead of 'async def', allowing FastAPI to run it on a threadpool worker. For enhancing JSON performance, you can create a custom response class like 'CustomORJSONResponse' using 'orjson' for better performance and formatted JSON output.",
+    "gold_chunks": [
+      "advanced/stream-data#033",
+      "advanced/custom-response#007"
+    ],
+    "note": "A: To avoid blocking the event loop, you can declare the path operation function with regular 'def' instead of 'async def', so FastAPI will run it on a threadpool worker. | B: You can create a custom response class, such as 'CustomORJSONResponse', to enhance JSON performance using 'orjson' with specific settings."
+  },
+  {
+    "qid": "mult-006",
+    "type": "multi_hop",
+    "question": "How can you self-host custom Swagger UI documentation in FastAPI while disabling deep linking?",
+    "gold_answer": "To self-host custom Swagger UI documentation in FastAPI, you can set the URLs for the documentation to 'None' and define your own path operations to serve the static assets. For disabling deep linking, you can configure the FastAPI app with 'swagger_ui_parameters={\"deepLinking\": False}'. By combining these methods, you can customize and self-host the Swagger UI with deep linking disabled.",
+    "gold_chunks": [
+      "how-to/custom-docs-ui-assets#008",
+      "how-to/configure-swagger-ui#001"
+    ],
+    "note": "A: To self-host custom Swagger UI documentation, set the URLs to 'None' and create path operations to serve static assets. | B: You can disable deep linking in Swagger UI by setting 'swagger_ui_parameters={\"deepLinking\": False}' in the FastAPI app configuration."
+  },
+  {
+    "qid": "mult-007",
+    "type": "multi_hop",
+    "question": "How can you manually define a required request body schema in OpenAPI for a FastAPI endpoint without using Pydantic, and how does this compare to using a Pydantic model with default values for optional fields?",
+    "gold_answer": "You can manually define a required request body schema in OpenAPI for a FastAPI endpoint by using the 'openapi_extra' parameter, which allows you to specify the schema directly without using Pydantic. This approach requires you to handle the request body parsing manually. In contrast, when using a Pydantic model with default values, fields with defaults are not marked as required in the OpenAPI schema, even if they are part of the model, because they have default values, making them optional.",
+    "gold_chunks": [
+      "advanced/path-operation-advanced-configuration#003",
+      "how-to/separate-openapi-schemas#000"
+    ],
+    "note": "A: You can add additional data to the OpenAPI schema using 'openapi_extra', allowing you to define a request body schema without using Pydantic. | B: Pydantic models with default values will generate OpenAPI schemas where fields with defaults are not marked as required."
+  },
+  {
+    "qid": "mult-008",
+    "type": "multi_hop",
+    "question": "How does FastAPI leverage both Starlette and Uvicorn to provide its functionality, and what are the performance implications?",
+    "gold_answer": "FastAPI inherits from Starlette, which means it includes all of Starlette's web microframework functionality, such as routing and session support. Starlette itself uses Uvicorn as the server, which is the fastest ASGI server available. This setup allows FastAPI to provide additional features like data validation and automatic documentation without sacrificing much performance, as it builds on the already efficient Starlette and Uvicorn.",
+    "gold_chunks": [
+      "alternatives#010",
+      "benchmarks#001"
+    ],
+    "note": "A: FastAPI inherits directly from Starlette, which provides core web microframework functionality, and Uvicorn is a fast ASGI server used by Starlette. | B: FastAPI uses Starlette, which in turn uses Uvicorn, and FastAPI cannot be faster than Starlette, just as Starlette cannot be faster than Uvicorn."
+  },
+  {
+    "qid": "mult-009",
+    "type": "multi_hop",
+    "question": "How does FastAPI integrate OAuth2 scopes into its security system, and what role do these scopes play in authentication with third-party providers like Google and Facebook?",
+    "gold_answer": "FastAPI integrates OAuth2 scopes to allow a more fine-grained permission system, which can be seamlessly used with OpenAPI applications and API docs. These scopes are used by third-party authentication providers like Google and Facebook to provide specific permissions during the login process. FastAPI provides tools to easily implement OAuth2 with scopes, which is part of the OAuth2 specification for handling authentication and authorization.",
+    "gold_chunks": [
+      "tutorial/security/index#000",
+      "advanced/security/oauth2-scopes#000"
+    ],
+    "note": "A: OAuth2 is a specification for handling authentication and authorization, used by systems with 'login with' options like Google and Facebook. | B: FastAPI integrates OAuth2 scopes to provide a fine-grained permission system, which is used by third-party providers like Google and Facebook."
+  },
+  {
+    "qid": "mult-010",
+    "type": "multi_hop",
+    "question": "How can you structure a FastAPI project to handle multiple files and also include a sub-application with its own independent OpenAPI documentation?",
+    "gold_answer": "To structure a FastAPI project with multiple files, you can organize your files into directories and use `__init__.py` files to allow importing code between them. For example, you might have a directory structure with separate files for routers and dependencies. To include a sub-application with its own OpenAPI documentation, you can create a main FastAPI application and 'mount' the sub-application at a specific path. This allows the sub-application to handle requests independently, including its OpenAPI documentation.",
+    "gold_chunks": [
+      "tutorial/bigger-applications#000",
+      "advanced/sub-applications#000"
+    ],
+    "note": "A: FastAPI allows structuring applications across multiple files using directories and `__init__.py` files, similar to Flask's Blueprints. | B: FastAPI supports mounting sub-applications with their own independent OpenAPI documentation by using the `mount` method to add them to a main application."
+  },
+  {
+    "qid": "mult-011",
+    "type": "multi_hop",
+    "question": "How can you ensure that a custom exception handler for a UnicornException works correctly when using a UnicornMiddleware in a FastAPI application?",
+    "gold_answer": "To ensure that a custom exception handler for a UnicornException works correctly when using a UnicornMiddleware in a FastAPI application, you should use the app.add_middleware() method to add the middleware. This method ensures that internal middlewares handle server errors and custom exception handlers properly. Additionally, you can override the default exception handlers by decorating your custom handler with @app.exception_handler(UnicornException).",
+    "gold_chunks": [
+      "tutorial/handling-errors#003",
+      "advanced/middleware#000"
+    ],
+    "note": "A: FastAPI allows you to override default exception handlers by decorating your custom handler with @app.exception_handler(UnicornException). | B: FastAPI provides a simpler way to add middleware using app.add_middleware(), ensuring that internal middlewares handle server errors and custom exception handlers work properly."
+  },
+  {
+    "qid": "mult-012",
+    "type": "multi_hop",
+    "question": "How can you ensure compatibility with the latest Python versions when using FastAPI, considering the need for Pydantic v2 and optional dependencies?",
+    "gold_answer": "To ensure compatibility with the latest Python versions when using FastAPI, you need to migrate to Pydantic v2 because Pydantic v1 is no longer supported in Python 3.14 and above. Additionally, you might consider installing optional dependencies like 'pydantic-settings' and 'pydantic-extra-types' for enhanced functionality with Pydantic.",
+    "gold_chunks": [
+      "how-to/migrate-from-pydantic-v1-to-pydantic-v2#000",
+      "index#010"
+    ],
+    "note": "A: Pydantic v1 is no longer supported in Python 3.14 and above, so you need to use Pydantic v2 for compatibility with the latest Python versions. | B: You can install additional optional Pydantic dependencies like 'pydantic-settings' and 'pydantic-extra-types' for settings management and extra types."
+  },
+  {
+    "qid": "mult-013",
+    "type": "multi_hop",
+    "question": "How can you ensure that database migrations are performed only once when deploying a FastAPI application using Docker and Kubernetes, considering the interaction between containers and processes?",
+    "gold_answer": "To ensure that database migrations are performed only once when deploying a FastAPI application using Docker and Kubernetes, you can use an 'Init Container' in Kubernetes. This container runs before your main application container and performs the necessary setup tasks, like database migrations, ensuring they are executed only once. This approach leverages the fact that a container in Docker or Kubernetes typically runs a single main process, and the 'Init Container' is designed to complete its task before the main application container starts.",
+    "gold_chunks": [
+      "deployment/concepts#008",
+      "deployment/docker#002"
+    ],
+    "note": "A: In Kubernetes, an 'Init Container' can be used to run setup tasks before the main application container starts, ensuring tasks like database migrations are executed only once. | B: A container in Docker or Kubernetes runs a single main process, and the container stops if this process stops, which ensures that the 'Init Container' completes its task before the main application container starts."
+  },
+  {
+    "qid": "mult-014",
+    "type": "multi_hop",
+    "question": "How can you serve frontend files with an APIRouter and ensure that certain dependencies apply to both the frontend and path operations?",
+    "gold_answer": "You can serve frontend files by adding them to an APIRouter and including it with a prefix. Dependencies specified in the APIRouter will apply to both the frontend responses and the path operations. This allows for consistent application of middleware and authentication across both types of responses.",
+    "gold_chunks": [
+      "tutorial/bigger-applications#005",
+      "tutorial/frontend#003"
+    ],
+    "note": "A: Dependencies can be added to an APIRouter, and they will apply to all path operations included in that router. | B: Frontend files can be added to an APIRouter, and dependencies from the APIRouter will apply to frontend responses."
+  },
+  {
+    "qid": "mult-015",
+    "type": "multi_hop",
+    "question": "How can you ensure that a custom HTML response is documented in OpenAPI while also handling multiple status codes in a FastAPI application?",
+    "gold_answer": "To ensure that a custom HTML response is documented in OpenAPI while also handling multiple status codes, you can use the `response_class` parameter to define the media type for documentation purposes and return a `Response` object with the desired status code. This way, the `response_class` will document the OpenAPI path operation, and you can return different status codes by creating and returning `Response` objects directly.",
+    "gold_chunks": [
+      "advanced/custom-response#002",
+      "advanced/additional-status-codes#000"
+    ],
+    "note": "A: The `response_class` parameter is used to document the media type in OpenAPI, but you can override the response directly by returning a `Response` object. | B: You can return additional status codes by directly returning a `Response` object like `JSONResponse` and setting the `status_code` you want."
+  },
+  {
+    "qid": "mult-016",
+    "type": "multi_hop",
+    "question": "How can you use SQLModel models in FastAPI to both define database tables on startup and ensure the data shape appears in the automatic API docs?",
+    "gold_answer": "SQLModel models can be used to define database tables during the application startup event. Additionally, since each SQLModel model is also a Pydantic model, it can be used in type annotations, allowing the shape of the data to appear in the automatic API docs UI.",
+    "gold_chunks": [
+      "_llm-test#003",
+      "tutorial/sql-databases#010"
+    ],
+    "note": "A: The automatic API docs in FastAPI show the shape of data based on type annotations. | B: SQLModel models, being Pydantic models, can be used in type annotations and are used to create database tables on application startup."
+  },
+  {
+    "qid": "mult-017",
+    "type": "multi_hop",
+    "question": "How can you configure a FastAPI application to ensure that it only accepts requests forwarded by a trusted proxy and also enforces HTTPS and a valid Host header?",
+    "gold_answer": "To configure a FastAPI application to only accept requests forwarded by a trusted proxy, you can use the '--forwarded-allow-ips' option to specify the IPs of trusted proxies. Additionally, you can add the HTTPSRedirectMiddleware to enforce HTTPS and the TrustedHostMiddleware to ensure that requests have a valid Host header.",
+    "gold_chunks": [
+      "advanced/behind-a-proxy#000",
+      "advanced/middleware#001"
+    ],
+    "note": "A: You can start FastAPI CLI with the option '--forwarded-allow-ips' and pass the IP addresses that should be trusted to read those forwarded headers. | B: Enforces that all incoming requests must either be HTTPS or WSS and have a correctly set Host header using HTTPSRedirectMiddleware and TrustedHostMiddleware."
+  },
+  {
+    "qid": "mult-018",
+    "type": "multi_hop",
+    "question": "How does the FastAPI application handle user authentication with JWT tokens and what role do OAuth2 scopes play in this process?",
+    "gold_answer": "The FastAPI application authenticates users by generating a JWT token when a user logs in with valid credentials. This token includes an expiration time set using a timedelta. OAuth2 scopes are used to define and control access to different parts of the application, such as reading user information or accessing items, by associating these scopes with the JWT token.",
+    "gold_chunks": [
+      "tutorial/security/oauth2-jwt#012",
+      "advanced/security/oauth2-scopes#007"
+    ],
+    "note": "A: The application generates a JWT token with an expiration time using a timedelta when a user logs in with correct credentials. | B: OAuth2 scopes define the permissions associated with the JWT token, allowing access to specific parts of the application based on these scopes."
+  },
+  {
+    "qid": "mult-019",
+    "type": "multi_hop",
+    "question": "How does FastAPI utilize Python's Annotated type hint to enhance both metadata declaration and dependency management in applications?",
+    "gold_answer": "FastAPI uses Python's Annotated type hint to allow developers to add additional metadata to parameters, enhancing editor support and type checks. Additionally, Annotated can be used to manage dependencies by storing them in a variable, which can then be reused across multiple endpoints, preserving type information for better editor support.",
+    "gold_chunks": [
+      "python-types#006",
+      "tutorial/dependencies/index#003"
+    ],
+    "note": "A: FastAPI uses Annotated to provide additional metadata about how you want your application to behave, enhancing editor support and type checks. | B: Annotated can be used to store dependencies in a variable, allowing reuse across multiple endpoints while preserving type information for editor support."
+  },
+  {
+    "qid": "mult-020",
+    "type": "multi_hop",
+    "question": "How can you create a reusable dependency function in FastAPI and also parameterize it to check if a specific content is included in a query parameter?",
+    "gold_answer": "In FastAPI, you can create a reusable dependency function by defining a function like 'common_parameters' and using 'Depends' to inject it into multiple path operations. To parameterize a dependency, you can use a class with an '__init__' method to set parameters, and then use the instance of this class with 'Depends'. This allows you to check if a specific content is included in a query parameter by implementing a '__call__' method that performs the check.",
+    "gold_chunks": [
+      "tutorial/dependencies/index#002",
+      "advanced/advanced-dependencies#001"
+    ],
+    "note": "A: FastAPI allows the creation of reusable dependency functions by using 'Depends' to inject them into path operations, enabling shared code execution. | B: You can parameterize dependencies in FastAPI by using a class with an '__init__' method and implementing a '__call__' method to perform specific checks, such as verifying if a query parameter contains a certain fixed content."
+  },
+  {
+    "qid": "mult-021",
+    "type": "multi_hop",
+    "question": "How does FastAPI handle validation and documentation of deeply nested JSON objects compared to NestJS, and what are the benefits of using Python types in this context?",
+    "gold_answer": "FastAPI can validate deeply nested JSON objects and automatically generate interactive API documentation, benefiting from Python types for editor support and type checks. In contrast, NestJS struggles with nested models and requires additional decorators for validation and documentation.",
+    "gold_chunks": [
+      "alternatives#005",
+      "index#006"
+    ],
+    "note": "A: NestJS can't handle nested models very well, requiring decorators for validation and documentation. | B: FastAPI provides validation for deeply nested JSON objects and automatic interactive API documentation, benefiting from Python types for editor support."
+  },
+  {
+    "qid": "mult-022",
+    "type": "multi_hop",
+    "question": "How can you ensure that JWT tokens are securely signed and what is the default expiration time for these tokens in a FastAPI application using OAuth2 with Password and JWT tokens?",
+    "gold_answer": "To ensure that JWT tokens are securely signed, you should generate a secure random secret key using a command like 'openssl rand -hex 32' and set it in the application. The default expiration time for these tokens is 30 minutes, as indicated by the variable ACCESS_TOKEN_EXPIRE_MINUTES.",
+    "gold_chunks": [
+      "tutorial/security/oauth2-jwt#006",
+      "advanced/security/oauth2-scopes#002"
+    ],
+    "note": "A: Create a random secret key that will be used to sign the JWT tokens. To generate a secure random secret key use the command: openssl rand -hex 32. | B: The default expiration time for the JWT tokens is set by the variable ACCESS_TOKEN_EXPIRE_MINUTES, which is 30 minutes."
+  },
+  {
+    "qid": "mult-023",
+    "type": "multi_hop",
+    "question": "How can you use OpenAPI callbacks in FastAPI to handle asynchronous responses with additional status codes and models?",
+    "gold_answer": "You can use OpenAPI callbacks in FastAPI to document external APIs that will be called back with information from the original request. Additionally, you can declare extra responses with different status codes and models using the 'responses' parameter in path operation decorators. This allows you to handle asynchronous responses with specific status codes and include models for those responses in the OpenAPI schema.",
+    "gold_chunks": [
+      "advanced/openapi-callbacks#006",
+      "advanced/additional-responses#000"
+    ],
+    "note": "A: OpenAPI callbacks allow your API to send requests to an external API using a callback URL and parts of the original request. | B: You can declare additional responses with different status codes and models using the 'responses' parameter in FastAPI, which will be included in the OpenAPI schema."
+  },
+  {
+    "qid": "mult-024",
+    "type": "multi_hop",
+    "question": "How does the FastAPI application ensure that only active users with the correct scopes can access the '/users/me' endpoint?",
+    "gold_answer": "The FastAPI application uses the 'get_current_user' dependency to ensure that the token provided has the correct scopes and that the user is active. If the user is disabled, an HTTPException is raised. The 'get_current_active_user' function checks if the user is active and has the necessary scopes before allowing access to the '/users/me' endpoint.",
+    "gold_chunks": [
+      "advanced/security/oauth2-scopes#007",
+      "tutorial/security/simple-oauth2#013"
+    ],
+    "note": "A: The 'get_current_user' function is used to obtain the current user based on the token and scopes provided. | B: The '/users/me' endpoint uses 'get_current_active_user' to ensure that the user is active and has the necessary permissions before granting access."
+  },
+  {
+    "qid": "mult-025",
+    "type": "multi_hop",
+    "question": "How does FastAPI ensure compatibility with Pydantic while also using Python type declarations for data validation and conversion?",
+    "gold_answer": "FastAPI ensures compatibility with Pydantic by including its tests with Pydantic's own tests, making sure that new versions of Pydantic above 1.0.0 are always compatible with FastAPI. At the same time, FastAPI uses standard Python type declarations to define requirements, convert, and validate data, which simplifies the process by avoiding additional classes or decorators.",
+    "gold_chunks": [
+      "deployment/versions#001",
+      "python-types#007"
+    ],
+    "note": "A: Pydantic includes the tests for FastAPI with its own tests, so new versions of Pydantic (above 1.0.0) are always compatible with FastAPI. | B: FastAPI uses standard Python type declarations to define requirements, convert data, and validate data, simplifying the process by avoiding additional classes or decorators."
+  },
+  {
+    "qid": "ambi-001",
+    "type": "ambiguous",
+    "question": "What happens if I send an extra 'tool' parameter?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The question refers to query parameters in the context of the FilterParams model.): You will receive an error response indicating that the 'tool' query parameter is not allowed. Reading 2 (The question refers to header parameters in the context of the CommonHeaders model.): You will receive an error response indicating that the 'tool' header parameter is not allowed.",
+    "gold_chunks": [
+      "tutorial/query-param-models#001",
+      "tutorial/header-param-models#001"
+    ]
+  },
+  {
+    "qid": "ambi-002",
+    "type": "ambiguous",
+    "question": "What happens if I don't provide a value for a query parameter?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (Passage A discusses how FastAPI handles query parameters, including default values and validation errors for empty or unrecognized values.): If you don't provide a value for a query parameter, FastAPI will use the default value if specified, or raise a 422 validation error if the value is empty or unrecognized. Reading 2 (Passage B explains the handling of query parameters in FastAPI, focusing on the optional nature of parameters when a default value of None is provided.): If you don't provide a value for a query parameter declared with a default of None, it is treated as optional and no error is raised.",
+    "gold_chunks": [
+      "tutorial/query-params#002",
+      "index#007"
+    ]
+  },
+  {
+    "qid": "ambi-003",
+    "type": "ambiguous",
+    "question": "How can I make my FastAPI app trust proxy headers?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The passage discusses configuring the application server to trust forwarded headers from a proxy using the FastAPI CLI option `--forwarded-allow-ips`.): Use the FastAPI CLI option `--forwarded-allow-ips` to specify which IPs the application server should trust for forwarded headers. Reading 2 (The passage explains how to use the FastAPI CLI with the option `--forwarded-allow-ips` to trust IPs for forwarded headers when behind a proxy.): Start FastAPI CLI with the option `--forwarded-allow-ips` to specify trusted IPs for forwarded headers.",
+    "gold_chunks": [
+      "deployment/https#007",
+      "advanced/behind-a-proxy#000"
+    ]
+  },
+  {
+    "qid": "ambi-004",
+    "type": "ambiguous",
+    "question": "How does OAuth2 handle permissions?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The question refers to the specific way OAuth2 uses scopes as strings to declare permissions.): OAuth2 handles permissions using scopes, which are strings that declare specific permissions required, like 'users:read'. Reading 2 (The question refers to the broader context of OAuth2's role in authentication and authorization.): OAuth2 handles permissions as part of its specification for authentication and authorization, often used in 'login with' systems.",
+    "gold_chunks": [
+      "advanced/security/oauth2-scopes#001",
+      "tutorial/security/index#000"
+    ]
+  },
+  {
+    "qid": "ambi-005",
+    "type": "ambiguous",
+    "question": "How do I verify JWT tokens in Python?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The question refers to using PyJWT for generating and verifying JWT tokens.): You need to install `PyJWT` to generate and verify the JWT tokens in Python. Reading 2 (The question refers to using the `jwt` library for handling JWT tokens.): You can use the `jwt` library to handle JWT tokens, as shown in the import statement.",
+    "gold_chunks": [
+      "tutorial/security/oauth2-jwt#000",
+      "advanced/security/oauth2-scopes#030"
+    ]
+  },
+  {
+    "qid": "ambi-006",
+    "type": "ambiguous",
+    "question": "How can I set a custom status code for a response?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (Passage A describes how to set a custom status code by returning a JSONResponse directly with the desired status code.): You can set a custom status code by returning a JSONResponse directly and specifying the status_code parameter. Reading 2 (Passage B talks about setting a custom status code using the status_code parameter in the path operation decorator.): You can set a custom status code by using the status_code parameter in the path operation decorator.",
+    "gold_chunks": [
+      "advanced/additional-status-codes#000",
+      "tutorial/response-status-code#002"
+    ]
+  },
+  {
+    "qid": "ambi-007",
+    "type": "ambiguous",
+    "question": "How do I handle default values for query parameters?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The developer is asking about setting default values for query parameters using the Query class in FastAPI, which allows for explicit declaration and additional validation options.): Use the default value of the function parameter instead of the default parameter in Query, especially when using Annotated. Reading 2 (The developer is asking about handling default values in the context of path parameters and query parameters, where the order of parameters might affect the function signature.): Re-order the parameters so that the one without a default (the query parameter) comes first, or use Annotated to avoid order issues.",
+    "gold_chunks": [
+      "tutorial/query-params-str-validations#003",
+      "tutorial/path-params-numeric-validations#001"
+    ]
+  },
+  {
+    "qid": "ambi-008",
+    "type": "ambiguous",
+    "question": "How do I change the default URL for OpenAPI docs?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (PASSAGE A): You can configure the OpenAPI URL with the parameter `openapi_url` in the FastAPI instance, for example, by setting it to '/api/v1/openapi.json'. Reading 2 (PASSAGE B): The passage does not provide information on changing the default URL for OpenAPI docs.",
+    "gold_chunks": [
+      "tutorial/metadata#004",
+      "tutorial/header-params#000"
+    ]
+  },
+  {
+    "qid": "ambi-010",
+    "type": "ambiguous",
+    "question": "How do I start a FastAPI server?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (PASSAGE A): Use the command `uv run fastapi dev` to start the FastAPI server. Reading 2 (PASSAGE B): Use the command `fastapi run main.py` to start the FastAPI server.",
+    "gold_chunks": [
+      "advanced/sub-applications#001",
+      "deployment/manually#000"
+    ]
+  },
+  {
+    "qid": "ambi-011",
+    "type": "ambiguous",
+    "question": "How do dependencies behave after the response is sent?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (In Passage A, dependencies with yield can be closed before the response is sent if using Depends(scope='function').): In Passage A, if using Depends(scope='function'), the dependency closes before the response is sent. Reading 2 (In Passage B, dependencies are executed but their return values are not used, and they are part of the request and response cycle.): In Passage B, dependencies are executed as part of the request and response cycle, but their return values are not used.",
+    "gold_chunks": [
+      "tutorial/dependencies/dependencies-with-yield#007",
+      "tutorial/dependencies/dependencies-in-path-operation-decorators#002"
+    ]
+  },
+  {
+    "qid": "ambi-012",
+    "type": "ambiguous",
+    "question": "How does get_current_user handle token validation?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The get_current_user function in Passage A uses a fake_decode_token function to decode the token and does not perform any actual token validation.): It uses a fake_decode_token function to decode the token without real validation. Reading 2 (The get_current_user function in Passage B decodes the JWT token and checks for the username in the payload to validate credentials.): It decodes the JWT token and checks for the username in the payload for validation.",
+    "gold_chunks": [
+      "tutorial/security/get-current-user#003",
+      "tutorial/security/oauth2-jwt#014"
+    ]
+  },
+  {
+    "qid": "ambi-013",
+    "type": "ambiguous",
+    "question": "How does FastAPI handle OpenAPI schema generation?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The question refers to how FastAPI deals with additional status codes and responses.): FastAPI does not include additional status codes and responses in the OpenAPI schema if they are returned directly, as it cannot predict them. Reading 2 (The question refers to how FastAPI generates schemas for request bodies.): FastAPI generates JSON Schema definitions for request bodies and includes them in the OpenAPI schema, which is used by the automatic documentation UIs.",
+    "gold_chunks": [
+      "advanced/additional-status-codes#001",
+      "tutorial/body#002"
+    ]
+  },
+  {
+    "qid": "ambi-014",
+    "type": "ambiguous",
+    "question": "How does FastAPI handle security schemes with OAuth2PasswordBearer?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The developer is exploring how FastAPI uses OAuth2PasswordBearer to define security schemes in OpenAPI.): FastAPI uses OAuth2PasswordBearer to define a security scheme in OpenAPI by recognizing it as a callable dependency that integrates with the OpenAPI schema and automatic API docs. Reading 2 (The developer is interested in understanding how OAuth2PasswordBearer functions as a security scheme in FastAPI.): OAuth2PasswordBearer informs FastAPI that it is a security scheme, allowing it to be added to OpenAPI, but it is distinct from OAuth2PasswordRequestForm, which is a class dependency for handling form data.",
+    "gold_chunks": [
+      "tutorial/security/first-steps#004",
+      "tutorial/security/simple-oauth2#004"
+    ]
+  },
+  {
+    "qid": "ambi-015",
+    "type": "ambiguous",
+    "question": "How do I handle errors with custom headers?",
+    "gold_answer": "AMBIGUOUS. Reading 1 (The question refers to handling errors by raising HTTP exceptions with custom headers in FastAPI.): In FastAPI, you can handle errors with custom headers by raising an HTTPException with the headers parameter, like in the example where a 404 error includes a custom 'X-Error' header. Reading 2 (The question refers to handling errors when extra headers are sent in requests, using Pydantic models to forbid extra fields.): In FastAPI, you handle errors with custom headers by using Pydantic's model configuration to forbid extra fields, which will return an error response if a client sends extra headers not defined in the model.",
+    "gold_chunks": [
+      "tutorial/handling-errors#002",
+      "tutorial/header-param-models#001"
+    ]
+  },
+  {
+    "qid": "conf-001",
+    "type": "conflicting",
+    "question": "How should I implement a streaming endpoint in FastAPI to stream data efficiently, and does it require using async functions?",
+    "gold_answer": "The current recommended approach for implementing a streaming endpoint in FastAPI is to use async functions with `StreamingResponse` or `EventSourceResponse`, as this allows for non-blocking I/O operations, which is efficient for handling multiple connections. In FastAPI, you can use `async def` with `AsyncIterable` for streaming data. However, if you prefer or need to use synchronous functions, you can still use `def` with `Iterable`, but it may not be as efficient for handling concurrent requests.",
+    "gold_chunks": [
+      "advanced/stream-data#006",
+      "tutorial/server-sent-events#004"
+    ],
+    "note": "Outdated answer: Previously, it was common to see streaming implementations using synchronous functions (`def`) with `Iterable`. While this is still supported, it is generally less efficient compared to using async functions, especially in scenarios with high concurrency."
+  },
+  {
+    "qid": "conf-002",
+    "type": "conflicting",
+    "question": "How should you define optional query parameters with validation in FastAPI, and what are the benefits of using Annotated over the old default value style?",
+    "gold_answer": "The current recommended approach is to use `Annotated` for defining optional query parameters with validation in FastAPI. This allows you to include metadata like `Query` with validation constraints such as `max_length` and `min_length`. Using `Annotated` ensures that the function behaves correctly when used outside of FastAPI, as the default value remains intuitive and editors can provide better support with required parameters. The old style without `Annotated` can lead to unexpected behavior if the function is called without FastAPI, as the default value might not be what you expect.",
+    "gold_chunks": [
+      "tutorial/query-params-str-validations#001",
+      "tutorial/query-params-str-validations#004"
+    ],
+    "note": "Outdated answer: Previously, you could define optional query parameters using the old default value style without `Annotated`, but this could cause issues when calling the function outside of FastAPI, as the default values might not behave as expected and editors wouldn't flag missing required parameters."
+  },
+  {
+    "qid": "conf-003",
+    "type": "conflicting",
+    "question": "How should I secure an endpoint that requires specific OAuth2 scopes in FastAPI?",
+    "gold_answer": "The current recommended approach is to use the `Security` dependency from FastAPI, where you specify the required scopes as a list in the `scopes` parameter. This allows you to enforce scope-based access control. For example, if you want to secure an endpoint with the 'items' scope, you would use `Security(get_current_active_user, scopes=[\"items\"])`. This method is more flexible and aligns with the OAuth2 specification for scope management.",
+    "gold_chunks": [
+      "advanced/security/oauth2-scopes#005",
+      "tutorial/security/oauth2-jwt#009"
+    ],
+    "note": "Outdated answer: An older approach might not have used the `Security` dependency or specified scopes directly, potentially leading to less granular control over access permissions."
+  },
+  {
+    "qid": "conf-004",
+    "type": "conflicting",
+    "question": "When setting up a Dockerfile for a FastAPI application, should I use the exec or shell form for the CMD instruction?",
+    "gold_answer": "The current recommended approach is to use the exec form of the CMD instruction, like CMD [\"fastapi\", \"run\", \"app/main.py\", \"--port\", \"80\"]. This ensures that FastAPI can shutdown gracefully and lifespan events are triggered.",
+    "gold_chunks": [
+      "deployment/docker#005"
+    ],
+    "note": "Outdated answer: An outdated or incorrect approach would be to use the shell form of the CMD instruction, such as CMD fastapi run app/main.py --port 80, which is not recommended as it can lead to issues with graceful shutdown and lifespan events."
+  },
+  {
+    "qid": "conf-005",
+    "type": "conflicting",
+    "question": "How should I handle HTTPS certificates for my FastAPI application to ensure secure communication?",
+    "gold_answer": "The current recommended approach is to use a TLS Termination Proxy such as Traefik or Caddy, which can manage HTTPS certificates and automate their renewal using Let's Encrypt. This provides free, automated, and secure HTTPS certificates with a short lifespan, enhancing security.",
+    "gold_chunks": [
+      "deployment/https#004",
+      "deployment/https#002"
+    ],
+    "note": "Outdated answer: Before Let's Encrypt, HTTPS certificates were acquired through a cumbersome process involving paperwork and were expensive. Certificates were sold by trusted third parties and required manual handling."
+  },
+  {
+    "qid": "conf-006",
+    "type": "conflicting",
+    "question": "How should you declare a cookie parameter in FastAPI using the latest standards?",
+    "gold_answer": "The current recommended way to declare a cookie parameter in FastAPI is to use the `Annotated` type hint with `Cookie()`, as shown in both passages. This approach aligns with the use of `Annotated` for other parameter types like `Query` and `Path`. This method provides a clear and consistent way to define parameters with additional metadata or dependencies.",
+    "gold_chunks": [
+      "tutorial/dependencies/sub-dependencies#000",
+      "tutorial/cookie-params#000"
+    ],
+    "note": "Outdated answer: An older approach might have involved using `Cookie()` without the `Annotated` type hint, which was common before the introduction of `Annotated` in Python 3.9. This older method lacks the additional metadata capabilities provided by `Annotated`."
+  },
+  {
+    "qid": "conf-007",
+    "type": "conflicting",
+    "question": "How should I integrate GraphQL into my FastAPI application?",
+    "gold_answer": "The current recommended approach is to use Strawberry with FastAPI for integrating GraphQL. Strawberry is preferred as it leverages Python's type annotations, making it more modern and type-safe. You can set it up using the GraphQLRouter from strawberry.fastapi. If you previously used Starlette's GraphQLApp with Graphene, note that it has been deprecated, and you should migrate to starlette-graphene3 if you wish to continue using Graphene.",
+    "gold_chunks": [
+      "how-to/graphql#001"
+    ],
+    "note": "Outdated answer: You can integrate GraphQL into your FastAPI application using Starlette's GraphQLApp with Graphene. However, this approach is now deprecated."
+  },
+  {
+    "qid": "conf-008",
+    "type": "conflicting",
+    "question": "How should I handle partial updates to a resource in FastAPI when using Pydantic models?",
+    "gold_answer": "The current recommended approach for handling partial updates in FastAPI is to use the `PATCH` method instead of `PUT` when applicable. You should retrieve the existing data, load it into a Pydantic model, and generate a dictionary excluding unset values using `exclude_unset`. Then, update the stored model with these changes and convert it to a JSON-compatible format using `jsonable_encoder` before saving it back to the database.",
+    "gold_chunks": [
+      "tutorial/body-updates#004",
+      "advanced/response-directly#001"
+    ],
+    "note": "Outdated answer: Previously, you might have used the `PUT` method for updates, which would require updating the entire resource, potentially overwriting existing values with defaults. The `jsonable_encoder` is still used to ensure the data is JSON-compatible."
+  },
+  {
+    "qid": "conf-010",
+    "type": "conflicting",
+    "question": "How should I declare path parameters in FastAPI to include metadata and validations?",
+    "gold_answer": "The current recommended approach is to use the 'Annotated' type from the 'typing' module in combination with 'Path' to declare metadata and validations for path parameters. This method has been supported since FastAPI version 0.95.0. For example, you can use 'Annotated[int, Path(title=\"The ID of the item to get\", ge=1)]' to specify that 'item_id' should be an integer greater than or equal to 1 with a title metadata. Ensure your FastAPI version is at least 0.95.1 to avoid errors.",
+    "gold_chunks": [
+      "tutorial/path-params-numeric-validations#003",
+      "tutorial/path-params-numeric-validations#000"
+    ],
+    "note": "Outdated answer: Previously, you could declare path parameters directly using 'Path' without 'Annotated', but this approach is not recommended in newer versions of FastAPI. You would have to use '*' to separate keyword arguments if not using 'Annotated'."
+  },
+  {
+    "qid": "conf-011",
+    "type": "conflicting",
+    "question": "How should I handle binary data in JSON when using Pydantic models in FastAPI?",
+    "gold_answer": "The current recommended approach is to use Pydantic models with `bytes` fields and set `val_json_bytes` in the model config to handle base64 encoding and decoding of binary data. This allows you to validate and process binary data included in JSON payloads. However, it's generally more efficient to use Request Files and FileResponse for handling binary data, unless you specifically need to include it in JSON.",
+    "gold_chunks": [
+      "advanced/json-base64-bytes#000"
+    ],
+    "note": "Outdated answer: An older or less efficient approach might involve manually encoding binary data to base64 before sending it in JSON, which can be less efficient than using files directly."
+  },
+  {
+    "qid": "conf-012",
+    "type": "conflicting",
+    "question": "How can I declare a query parameter with a hyphen in its name in FastAPI?",
+    "gold_answer": "To declare a query parameter with a hyphen in its name, such as 'item-query', use the 'alias' parameter in the Query() function. This allows you to specify a different name for the query parameter in the URL while using a valid Python variable name in your function.",
+    "gold_chunks": [
+      "tutorial/query-params-str-validations#009"
+    ],
+    "note": "Outdated answer: Previously, you might have tried to work around this by using different naming conventions or not using Query() at all, but this is not recommended as it can lead to less readable code and potential errors."
+  },
+  {
+    "qid": "conf-013",
+    "type": "conflicting",
+    "question": "How should I return a Pydantic model in a FastAPI endpoint, and is there a difference between Pydantic v1 and v2?",
+    "gold_answer": "In FastAPI, when returning a Pydantic model from an endpoint, you should use the `model_dump()` method to convert the model to a dictionary before returning it. This method is part of Pydantic v2, which replaced the `dict()` method used in Pydantic v1. The current recommended approach is to use `model_dump()` as shown in Passage B.",
+    "gold_chunks": [
+      "tutorial/testing#002"
+    ],
+    "note": "Outdated answer: In FastAPI, you could directly return a Pydantic model from an endpoint, and it would automatically be converted to a dictionary using the `dict()` method, which was the standard in Pydantic v1."
+  },
+  {
+    "qid": "conf-014",
+    "type": "conflicting",
+    "question": "How should I handle response serialization and request example data in FastAPI when using Pydantic models?",
+    "gold_answer": "For response serialization, you should use type annotations directly on your path operation functions, as shown in Passage A. This allows FastAPI to validate, serialize, and document the response data efficiently using Pydantic. For request example data, use the `Annotated` type from the `typing` module along with `Body` to provide multiple examples, as described in Passage B. This approach ensures that your examples are included in the JSON Schema, even though Swagger UI may not display them directly.",
+    "gold_chunks": [
+      "tutorial/response-model#000",
+      "tutorial/schema-extra-example#003"
+    ],
+    "note": "Outdated answer: Previously, you might have used OpenAPI-specific `examples` directly in the path operation details to ensure compatibility with Swagger UI, as JSON Schema's `examples` were not supported by Swagger UI."
+  },
+  {
+    "qid": "conf-015",
+    "type": "conflicting",
+    "question": "When handling file uploads in FastAPI, should I use a list of bytes or UploadFile for better performance and resource management?",
+    "gold_answer": "The current recommended approach is to use UploadFile when handling file uploads in FastAPI. This is because UploadFile uses a 'spooled' file, which stores the file in memory up to a certain size and then on disk, making it more efficient for handling large files without consuming too much memory. It also provides an async interface and allows access to file metadata. This is beneficial over using a list of bytes, which stores the entire file in memory and is only suitable for small files.",
+    "gold_chunks": [
+      "tutorial/request-files#005",
+      "tutorial/request-files#001"
+    ],
+    "note": "Outdated answer: An older approach was to use a list of bytes for handling file uploads, which stores the entire file in memory. This method works well for small files but is not efficient for larger files due to high memory consumption."
+  },
+  {
+    "qid": "conf-016",
+    "type": "conflicting",
+    "question": "How should I handle optional body parameters in FastAPI when using Pydantic models?",
+    "gold_answer": "In FastAPI, you can declare body parameters as optional by setting their default value to `None` in your Pydantic model. This allows you to mix these optional body parameters with path and query parameters seamlessly. For example, you can have a Pydantic model with optional fields, and when defining your endpoint, specify that the body parameter is optional by setting it to `None` by default.",
+    "gold_chunks": [
+      "tutorial/body-multiple-params#000"
+    ],
+    "note": "Outdated answer: Earlier versions of FastAPI might not have supported the use of Python's new type hinting syntax (e.g., `str | None`) for optional types, requiring the use of `Optional[str]` from the `typing` module instead."
+  },
+  {
+    "qid": "conf-017",
+    "type": "conflicting",
+    "question": "How can I handle a gradual migration from Pydantic v1 to v2 in a FastAPI application?",
+    "gold_answer": "In the latest FastAPI versions (0.128.0 and above), you must use Pydantic v2 models exclusively as the support for using both Pydantic v1 and v2 models in the same app has been removed. It is recommended to upgrade to Pydantic v2 and refactor your models accordingly.",
+    "gold_chunks": [
+      "how-to/migrate-from-pydantic-v1-to-pydantic-v2#004",
+      "how-to/migrate-from-pydantic-v1-to-pydantic-v2#002"
+    ],
+    "note": "Outdated answer: In FastAPI versions 0.119.0 to 0.127.x, you could perform a gradual migration by using both Pydantic v1 and v2 models in the same application. This involved importing Pydantic v1 models using the `pydantic.v1` submodule and using FastAPI-specific tools from `fastapi.temp_pydantic_v1_params`."
+  },
+  {
+    "qid": "conf-018",
+    "type": "conflicting",
+    "question": "How should I define path and query parameters in FastAPI to ensure compatibility and avoid issues when using the function outside of FastAPI?",
+    "gold_answer": "The current recommended approach is to use `Annotated` for defining parameters in FastAPI. This allows you to add metadata like validation rules without relying on default values, which can lead to issues when the function is used outside FastAPI. `Annotated` also supports multiple metadata annotations, making it versatile for use with other tools like Typer. Using `Annotated` ensures that the function behaves consistently and avoids potential errors when called outside of FastAPI.",
+    "gold_chunks": [
+      "tutorial/path-params-numeric-validations#001",
+      "tutorial/query-params-str-validations#004"
+    ],
+    "note": "Outdated answer: Previously, parameters were defined using default values with `Query()` or `Path()`, but this approach could lead to errors when the function was used outside of FastAPI, as Python would not enforce the required parameters. This method also relied on the order of parameters, which could be problematic."
+  },
+  {
+    "qid": "conf-019",
+    "type": "conflicting",
+    "question": "How should I handle the 'X-Token' header dependency across multiple path operations in FastAPI?",
+    "gold_answer": "The current recommended approach is to use the `APIRouter` to add shared dependencies, like the 'X-Token' header, to all path operations within a module. This allows you to avoid repeating the dependency in each path operation function. You can define the dependency once and apply it to all routes in the module. This is demonstrated in Passage A where the 'X-Token' dependency is added to the `APIRouter` for all item-related paths.",
+    "gold_chunks": [
+      "tutorial/bigger-applications#004",
+      "tutorial/testing#002"
+    ],
+    "note": "Outdated answer: In earlier examples, as shown in Passage B, each path operation individually includes the 'X-Token' header dependency in its function signature. This approach requires repeating the dependency for each path operation, which can lead to more verbose and less maintainable code."
+  },
+  {
+    "qid": "conf-020",
+    "type": "conflicting",
+    "question": "When should you use Security instead of Depends in FastAPI path operations?",
+    "gold_answer": "In FastAPI, you should use Security instead of Depends when you need to declare security scopes for your path operations. Security is a subclass of Depends with an additional parameter for scopes, which allows FastAPI to handle and document security requirements using OpenAPI. If your dependency does not require security scopes, you can continue using Depends.",
+    "gold_chunks": [
+      "advanced/security/oauth2-scopes#017",
+      "advanced/security/oauth2-scopes#015"
+    ],
+    "note": "Outdated answer: Previously, you might use Depends for all dependencies, including those with security scopes, but now, Security is recommended for cases where scopes are involved."
+  },
+  {
+    "qid": "unan-001",
+    "type": "unanswerable",
+    "question": "What are the exact performance benchmarks for FastAPI when deployed on AWS Lambda?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-002",
+    "type": "unanswerable",
+    "question": "How can I set up FastAPI with Redis Streams for real-time data processing?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-003",
+    "type": "unanswerable",
+    "question": "Is there a way to configure FastAPI to automatically scale with Kubernetes Horizontal Pod Autoscaler?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-004",
+    "type": "unanswerable",
+    "question": "What is the expected release date for FastAPI version 1.1?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-005",
+    "type": "unanswerable",
+    "question": "How do I integrate FastAPI with Firebase Authentication for a full-stack application?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-006",
+    "type": "unanswerable",
+    "question": "Can FastAPI natively support GraphQL subscriptions without third-party libraries?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-007",
+    "type": "unanswerable",
+    "question": "What are the specific configuration steps to use FastAPI with Google Cloud Run?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-008",
+    "type": "unanswerable",
+    "question": "How does FastAPI compare in performance to Express.js in handling 1000 concurrent requests?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-009",
+    "type": "unanswerable",
+    "question": "What are the configuration parameters for setting up FastAPI with MongoDB Atlas using SSL?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-010",
+    "type": "unanswerable",
+    "question": "How can I configure Azure Application Gateway to route traffic to a FastAPI application?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-011",
+    "type": "unanswerable",
+    "question": "What are the recommended practices for using FastAPI with RabbitMQ for message brokering?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-012",
+    "type": "unanswerable",
+    "question": "Does FastAPI support automatic API versioning, and how can it be configured?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-013",
+    "type": "unanswerable",
+    "question": "What is the best way to deploy a FastAPI application on Heroku with continuous integration?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-014",
+    "type": "unanswerable",
+    "question": "How can I use FastAPI with Elasticsearch for full-text search capabilities?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-016",
+    "type": "unanswerable",
+    "question": "What are the exact memory usage benchmarks for FastAPI running in a Docker container?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-017",
+    "type": "unanswerable",
+    "question": "Can FastAPI be configured to use HTTP/3 for improved performance?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-018",
+    "type": "unanswerable",
+    "question": "Are there any known issues with using FastAPI and Cloudflare's caching service?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-019",
+    "type": "unanswerable",
+    "question": "How can I integrate FastAPI with AWS S3 for file uploads and downloads?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  },
+  {
+    "qid": "unan-020",
+    "type": "unanswerable",
+    "question": "What configuration is needed to run FastAPI with Nginx as a reverse proxy on Windows?",
+    "gold_answer": "I don't know based on the provided documentation.",
+    "gold_chunks": []
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "_about": "Post-review corrections applied by step6_analyze.py. drop_questions are removed from every system; judge_overrides are answers the LLM judge marked wrong that both annotators judged correct (final_label OTHER).",
+  "drop_questions": {
+    "conf-013": "Gold answer wrong: FastAPI docs do not say to call model_dump() before returning a model.",
+    "ambi-005": "Not ambiguous: PyJWT is imported as jwt, so both readings are the same library.",
+    "ambi-008": "Broken gold: Reading 2 says the passage has no information.",
+    "ambi-014": "Not ambiguous: the two readings are essentially the same."
+  },
+  "judge_overrides": [
+    {
+      "system": "bm25",
+      "qid": "mult-004",
+      "reason": "adjudicated: A=R6, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "bm25",
+      "qid": "mult-014",
+      "reason": "adjudicated: A=R3, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "bm25",
+      "qid": "mult-015",
+      "reason": "Has response_class + return Response directly; extra `responses` mention isn't wrong; judge error"
+    },
+    {
+      "system": "dense",
+      "qid": "mult-005",
+      "reason": "adjudicated: A=R6, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "dense",
+      "qid": "mult-013",
+      "reason": "Answer *does* say Init Container; judge penalized an extra bash alternative"
+    },
+    {
+      "system": "dense",
+      "qid": "mult-014",
+      "reason": "adjudicated: A=R3, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "dense",
+      "qid": "mult-015",
+      "reason": "Answer says response_class *and* return Response directly; judge error"
+    },
+    {
+      "system": "dense",
+      "qid": "mult-022",
+      "reason": "Both parts right (strong key, 30 min); only missing the `openssl` command, so judge too strict"
+    },
+    {
+      "system": "dense",
+      "qid": "ambi-010",
+      "reason": "judge error, answer covers both"
+    },
+    {
+      "system": "dense",
+      "qid": "conf-008",
+      "reason": "PATCH + `exclude_unset` matches gold; judge only wanted `jsonable_encoder` too (too strict)"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "mult-005",
+      "reason": "adjudicated: A=R6, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "mult-011",
+      "reason": "adjudicated: A=R6, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "mult-013",
+      "reason": "Says Init Container; judge error (same as #29)"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "mult-014",
+      "reason": "adjudicated: A=R3, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "mult-015",
+      "reason": "Mentions returning Response directly; judge error"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "ambi-010",
+      "reason": "Gives *both* `fastapi dev` and `fastapi run`; judge error"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "conf-008",
+      "reason": "Matches the docs' steps exactly; docs themselves say PATCH is optional"
+    },
+    {
+      "system": "dense_rerank",
+      "qid": "conf-011",
+      "reason": "Answer = gold's main recommendation (val/ser_json_bytes base64); judge error"
+    },
+    {
+      "system": "rewrite",
+      "qid": "mult-004",
+      "reason": "adjudicated: A=R6, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "rewrite",
+      "qid": "mult-011",
+      "reason": "adjudicated: A=R6, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "rewrite",
+      "qid": "mult-014",
+      "reason": "adjudicated: A=R3, B=OTHER -> OTHER (checked retrieved passages/docs)"
+    },
+    {
+      "system": "rewrite",
+      "qid": "conf-011",
+      "reason": "Answer matches gold; judge error"
+    }
+  ]
+}
